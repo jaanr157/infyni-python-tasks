@@ -1,0 +1,204 @@
+# 1. Python program to check whether the given integer is a multiple of 5 and 7, and 10, 56.
+"""def no_multiple(x):
+        if x%5 == 0 and x%7 == 0:
+            return True
+        elif x%10 == 0 and x%56 == 0:
+            return True
+        else:
+            return False
+
+n = int(input("enter a no:"))
+k = no_multiple(n)
+print(k)"""
+
+# 2. Python program to find the factorial of a number using recursion.
+"""def factorial(x):
+    if x == 0 or x==1:
+        return 1
+    else:
+        return(x*factorial(x-1))
+
+n = int(input("enter a no:"))
+k = factorial(n)
+print(k)"""
+
+#3.  Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length.
+
+"""list1 = [
+    [1,2,3,4],
+    [5,6,7,8],
+    [9,10,11,12]
+]
+
+transposed = list()
+
+for i in range(len(list1[0])):
+    row = list()
+    for sublist in list1:
+        row.append(sublist[i])
+    transposed.append(row)
+
+print(transposed)"""
+
+
+#4.  Find the even elements from an array. Respectively multiply this element in the array.
+
+"""lst = []
+list2 = int(input("no.s:"))
+for i in range(0,list2):
+    num = int(input())
+    lst.append(num)
+print(lst)
+
+y = [i*2 for i in lst if i%2==0]
+print(y)"""
+
+# 5. Write a program.
+"""def remove_nan(input_list):
+    output_list = [value for value in input_list if not isinstance(value, float) or not math.isnan(value)]
+    return output_list
+
+import math
+
+input_list = [56.2, float('NaN'), 51.7, 55.3, 52.5, float('NaN'), 47.8]
+output_list = remove_nan(input_list)
+print(output_list)"""
+
+
+# 6. Flatten a list using list comprehension and for loop.
+
+"""i_l = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+o_l = [j for i in i_l for j in i]
+print(o_l)"""
+
+
+# 7.    A
+#      B C
+#     D E F
+#    G H I J
+#   K L M N O
+#  P Q R S T U
+# V W X Y Z [ \
+
+"""def generate_pattern(rows):
+    start_char = ord('A')
+    for i in range(rows):
+        line = " " * (rows - i - 1)
+        for j in range(i + 1):
+            line += chr(start_char)
+            start_char += 1
+            if start_char > ord('Z'):
+                start_char = ord('A')
+            if j < i:
+                line += " "
+        print(line)
+
+user_input = int(input("Enter the number of rows for the pattern: "))
+generate_pattern(user_input)"""
+
+
+# 8. Write a code to create a below pa:
+#     *
+#    * *
+#   * * *
+#  * * * *
+# * * * * *
+#  * * * *
+#   * * *
+#    * *
+#     *
+"""def pattern1(height):
+    for i in range(1,height+1):
+        spaces = " "*(height-i)
+        stars = "* "*i
+        print(spaces + stars)
+
+    for i in range(height-1,0,-1):
+        spaces = " "*(height-i)
+        stars = "* "*i
+        print(spaces + stars)
+
+x = int(input("enter num:"))
+k = pattern1(x)
+print(k)"""
+
+# 9. # write program to create blow pattern :
+# # 5432112345
+# # 5432  2345
+# # 543    345
+# # 54      45
+# # 5        5
+"""def pattern2(size):
+    for i in range(size, 0, -1):
+        line = ""
+        for j in range(size, 0, -1):
+            if j <= i:
+                line += str(j)
+            else:
+                line += " "
+        for j in range(2, size + 1):
+            if j <= i:
+                line += str(j)
+            else:
+                line += " "
+        print(line)
+
+user_input = int(input("Enter the size of the pattern: "))
+pattern2(user_input)"""
+
+
+
+
+# 10. # write program to create blow pattern :
+#    *
+#   * *
+#  *   *
+# *     *
+#  *   *
+#   * *
+#    *
+
+"""def pattern3(height):
+    for i in range(1,height):
+        space = " "*(height-1-i)
+        stars = "* "*i
+        if i != 1:
+            stars1 = "* "+ ("  "(i-2) ) + ""
+            print(space + stars1)
+        else:
+            print(space + stars)
+
+    for i in range(height-2,0,-1):
+        space = " "*(height-i-1)
+        stars = "* "*i
+        if i != 1:
+            stars1 = "* "+ ("  "(i-2) ) + ""
+            print(space + stars1)
+        else:
+            print(space + stars)
+
+n = int(input("enter a no"))
+k = pattern3(n)
+print(k)"""
+
+# 11. write program to create blow pattern :
+#     *
+#   *   *
+# *   *   *
+#   *   *
+#     *
+
+"""def pattern4(height):
+    for i in range(1,((height//2)+2)):
+        spaces = " "*((height//2)-i+1)
+        stars = "* "*i
+        print(spaces + stars)
+
+    for i in range(height//2,0,-1):
+        spaces = " "*((height//2)-i+1)
+        stars = "* "*i
+        print(spaces + stars)
+
+x = int(input("enter a no"))
+k = pattern4(x)
+print(k)"""
